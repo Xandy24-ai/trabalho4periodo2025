@@ -1,0 +1,8 @@
+name: Contar HTML
+on: [push]
+jobs: 
+  contar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "HTMLs: $(find . -name '*.html' | wc -l)"
