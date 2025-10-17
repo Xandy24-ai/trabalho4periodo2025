@@ -1,0 +1,10 @@
+name: Verificar arquivos grandes
+on: [push]
+jobs:
+  tamanho:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          echo "Verificando arquivos maiores que 100KB..."
+          find . -type f -size +100k -exec echo "Arquivo grande: {}" \;

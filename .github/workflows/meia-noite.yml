@@ -1,0 +1,14 @@
+name: Contar arquivos à meia-noite
+on:
+  schedule:
+    - cron: "0 3 * * *" # 00h no horário de Brasília (UTC-3)
+jobs:
+  contagem:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          echo "Executando contagem diária:"
+          echo "HTML: $(find . -name '*.html' | wc -l)"
+          echo "CSS:  $(find . -name '*.css' | wc -l)"
+          echo "JS:   $(find . -name '*.js' | wc -l)"
