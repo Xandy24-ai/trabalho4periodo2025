@@ -1,12 +1,23 @@
-name: Vários Steps Sequenciais
-on: [push]
-jobs:
-  multi:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: echo "Data: $(date)"
-      - run: echo "Usuário: ${{ github.actor }}"
-      - run: echo "HTML: $(find . -name '*.html' | wc -l)"
-      - run: echo "CSS: $(find . -name '*.css' | wc -l)"
-      - run: echo "JS: $(find . -name '*.js' | wc -l)"
+name: Vários Steps Sequenciais 
+
+on: [push] 
+
+jobs: 
+
+  multi: 
+
+    runs-on: ubuntu-latest 
+
+    steps: 
+
+      - uses: actions/checkout@v4 
+
+      - run: echo "Data: $(date)" 
+
+      - run: echo "Usuário: ${{ github.actor }}" 
+
+      - run: echo "HTML: $(find . -name '*.html' | wc -l)" 
+
+      - run: echo "CSS: $(find . -name '*.css' | wc -l)" 
+
+      - run: echo "JS: $(find . -name '*.js' | wc -l)" 

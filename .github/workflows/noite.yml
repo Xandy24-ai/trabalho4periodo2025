@@ -1,9 +1,17 @@
-name: Rodar à Noite
-on:
-  schedule:
-    - cron: "0 0-3 * * *" # entre 21h e 3h no Brasil
-jobs:
-  noite:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Rodando à noite!"
+name: Rodar à Noite 
+
+on: 
+
+  schedule: 
+
+    - cron: "0 0-3 * * *" # entre 21h e 3h no Brasil 
+
+jobs: 
+
+  noite: 
+
+    runs-on: ubuntu-latest 
+
+    steps: 
+
+      - run: echo "Rodando à noite!" 

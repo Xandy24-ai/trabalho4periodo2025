@@ -1,9 +1,17 @@
-name: Rodar aos Sábados
-on: 
-  schedule:
-    - cron: "0 0 * * 6"  # sábado à meia-noite UTC
-jobs:
-  sabado:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hoje é sábado!"
+name: Rodar aos Sábados 
+
+on:  
+
+  schedule: 
+
+    - cron: "0 0 * * 6"  # sábado à meia-noite UTC 
+
+jobs: 
+
+  sabado: 
+
+    runs-on: ubuntu-latest 
+
+    steps: 
+
+      - run: echo "Hoje é sábado!" 

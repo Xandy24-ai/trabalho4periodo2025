@@ -1,7 +1,13 @@
-name: Data e Hora
-on: [push]
-jobs: 
-  data-hora:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Data e hora: $(date)"
+name: Data e Hora 
+
+on: [push] 
+
+jobs:  
+
+  data-hora: 
+
+    runs-on: ubuntu-latest 
+
+    steps: 
+
+      - run: echo "Data e hora: $(date)" 
